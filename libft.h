@@ -11,6 +11,8 @@ typedef struct  s_list
     struct s_list   *next;
 }               t_list;
 
+int		ft_ispartofset(const char c, const char *set);
+int		ft_isspace(int c);
 size_t          ft_strlen(const char *s);
 char            *ft_strchr(const char *s, int c);
 //char		*ft_strrchr(const char *s, int c);
@@ -20,18 +22,24 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 //char		*ft_strnstr(const char *big, const char *small, size_t len);
 char		*ft_strdup(const char *s);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1, char const *set);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 //int		ft_isalnum(int c);
 int		ft_isprint(int c);
 int		ft_isascii(int c);
+//int		ft_toupper(int c);
+//int		ft_tolower(int c);i
+int		ft_atoi(const char *str);
+void		*ft_calloc(size_t nmemb, size_t size);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
 int		ft_memcmp(void *str1, const void *str2, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memmove(void *str1, const void *str2, size_t n);
 void		*ft_memset(void *str, int c, size_t n);
-void		ft_bezero(void *s, size_t n);
+void		ft_bzero(void *s, size_t n);
 
 
 #endif
