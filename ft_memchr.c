@@ -1,13 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/23 12:19:42 by agraton           #+#    #+#             */
+/*   Updated: 2020/11/23 12:51:12 by agraton          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void        *ft_memchr(void *str, int c, size_t n)
+void		*ft_memchr(void *str, int c, size_t n)
 {
-    char    *s = (char *)str;
-    size_t  i;
+	char	*s;
+	size_t	i;
 
-    i = -1;
-    while (++i < n)
-        if (s[i] == (char) c)
-            return ((void *)&(s[i]));
-    return (NULL);
+	s = (char *)str;
+	i = -1;
+	while (++i < n)
+		if (s[i] == (char)c)
+			return ((void *)&(s[i]));
+	return (NULL);
 }

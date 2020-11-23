@@ -1,47 +1,56 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/23 12:44:34 by agraton           #+#    #+#             */
+/*   Updated: 2020/11/23 12:44:49 by agraton          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static char *ft_strdupc(char **split, char c)
+static char		*ft_strdupc(char **dup, const char *s, char c)
 {
-    int	    size;
-    char    *newstr;
+	int		i;
 
-    size = 0;
-    while (split[0][size] && split[0][size] != c)
-	size++;
-    if (!(newstr = malloc(sizeof(char) * (size + 1))))
-	return (NULL);
-    size = 0;
-    while (**split && **split != c)
-	newstr[size++] = (*(*split)++);
-    newstr[size] = 0;
-    return (newstr);
+	while (*s == c)
+		s++;
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	if (!(*dup = malloc(sizeof(char) * (i + 1))))
+		return (NULL);
+	i = -1;
+	while (s[++i] && s[i] != c)
+		dup[0][i] = s[i];
+	dup[0][i] = '\0';
+	return ((char *)s + i);
 }
 
-char	    **ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-    size_t  size;
-    size_t  i;
-    size_t  o;
-    char    **split;
+	char	**split;
+	size_t	i;
+	size_t	o;
+	size_t	size;
 
-    if (!s)
-	return (NULL);
-    size = 0;
-    i = -1;
-    while (s[++i])
-	if (s[i] != c && (!s[i + 1] || s[i + 1] == c))
-	    size++;
-    if (!(split = malloc(sizeof(char *) * (size + 1))))
-	return (NULL);
-    o = -1;
-    i = -1;
-    split[size] = (char *)s;
-    while (++o < size)
-    {
-	while (*split[size] == c)
-	    *split[size] += 1;
-	split[o] = ft_strdupc(&(split[size]), c);
-    }
-    split[size] = NULL;
-    return (split);
+	if (!s)
+		return (NULL);
+	size = 0;
+	i = 0;
+	while (s[i++])
+		if ((s[i] == c || !s[i]) && s[i - 1] != c)
+			size++;
+	if (!(split = malloc(sizeof(char *) * (size + 1))))
+		return (NULL);
+	split[size] = (char *)s;
+	i = -1;
+	o = 0;
+	while (++i < size)
+		split[size] = ft_strdupc(&(split[i]), split[size], c);
+	split[size] = NULL;
+	return (split);
 }
