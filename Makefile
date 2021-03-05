@@ -6,7 +6,7 @@
 #    By: agraton <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 12:16:20 by agraton           #+#    #+#              #
-#    Updated: 2020/11/23 14:13:03 by agraton          ###   ########.fr        #
+#    Updated: 2021/03/05 10:57:19 by agraton          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = 	ft_isspace_bonus.c ft_ispartofset_bonus.c \
 	ft_bzero.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c  \
 	ft_isalnum.c ft_strrchr.c ft_strnstr.c ft_toupper.c ft_tolower.c \
-	ft_atoi.c ft_split.c
+	ft_atoi.c ft_split3.c
 SRC2 =	ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstsize.c  \
 	ft_lstlast.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBJS = ${SRC:.c=.o}
