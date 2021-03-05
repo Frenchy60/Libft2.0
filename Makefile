@@ -6,7 +6,7 @@
 #    By: agraton <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 12:16:20 by agraton           #+#    #+#              #
-#    Updated: 2021/03/05 10:57:19 by agraton          ###   ########.fr        #
+#    Updated: 2021/03/05 11:21:14 by agraton          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ ${OBJS} :
 
 
 bonus: all $(OBJS2)
-	ar -rc $(NAME) $(OBJS2)
+	ar -rcs $(NAME) $(OBJS2)
 
 clean:
 	/bin/rm -f ${OBJS} $(OBJS2)
