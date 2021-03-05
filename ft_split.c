@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:44:34 by agraton           #+#    #+#             */
-/*   Updated: 2021/03/05 12:20:02 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/05 12:20:19 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,14 @@ static char		*ft_strdupc(char **dup, const char *s, char c)
 	return ((char *)s + i);
 }
 
+char			**ft_freesplit(char **split, size_t i)
+{
+	while (i--)
+		free(split[i]);
+	free(split);
+	return (NULL);
+}
+
 char			**ft_split(char const *s, char c)
 {
 	char	**split;
@@ -50,7 +58,8 @@ char			**ft_split(char const *s, char c)
 	i = -1;
 	o = 0;
 	while (++i < size)
-		split[size] = ft_strdupc(&(split[i]), split[size], c);
+		if (!(split[size] = ft_strdupc(&(split[i]), split[size], c)))
+			return (ft_freesplit(split, i));
 	split[size] = NULL;
 	return (split);
 }

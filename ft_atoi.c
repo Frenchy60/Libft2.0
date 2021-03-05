@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:16:53 by agraton           #+#    #+#             */
-/*   Updated: 2021/03/05 12:19:49 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/05 12:22:23 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int			ft_atoi(const char *str)
 		ans = ans * 10 + (str[i++] - '0');
 	if (i <= 19 && ans <= LLONG_MAX)
 		return (ans * neg);
-	return ((neg == -1)? 0 : -1);
+	return ((neg == -1) ? 0 : -1);
 }
