@@ -6,7 +6,7 @@
 #    By: agraton <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 12:16:20 by agraton           #+#    #+#              #
-#    Updated: 2021/03/05 12:22:34 by agraton          ###   ########.fr        #
+#    Updated: 2021/03/06 18:14:36 by agraton          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,8 @@ NAME = libft.a
 
 all: ${NAME}
 
-${NAME}: ${OBJS}
-	ar -rc ${NAME} ${OBJS}
+$(NAME): ${OBJS}
+	ar -rcs ${NAME} ${OBJS}
 
 ${OBJS} :
 	gcc $(FLAGS) -c ${@:.o=.c} -o $@
