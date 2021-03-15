@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:25:07 by agraton           #+#    #+#             */
-/*   Updated: 2021/03/06 18:28:21 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/15 11:12:59 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void		ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst || !del)
+	if (!lst)
 		return ;
-	del(lst->content);
+	if (del)
+		del(lst->content);
 	free(lst);
 }

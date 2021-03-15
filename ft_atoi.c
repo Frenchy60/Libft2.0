@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:16:53 by agraton           #+#    #+#             */
-/*   Updated: 2021/03/07 11:45:49 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/11 10:39:31 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int			ft_atoi(const char *str)
 	long long		ans;
 
 	i = 0;
-	while (ft_isspace(str[i]))
+	while (ft_isspace(str[0]))
 		str++;
 	neg = 1;
-	if (str[i] == '+' || str[i] == '-')
-		if (str[i++] == '-')
+	if (str[0] == '+' || str[0] == '-')
+		if ((str++)[0] == '-')
 			neg = (neg == 1) ? -1 : 1;
 	ans = 0;
 	while (ft_isdigit(str[i]))

@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:24:25 by agraton           #+#    #+#             */
-/*   Updated: 2020/11/23 12:46:27 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/15 10:48:04 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
+	if (!*s1)
+		return (ft_strdup(""));
 	newsize = ft_strlen(s1) - 1;
 	while (ft_ispartofset(s1[newsize], set) && newsize)
 		newsize--;

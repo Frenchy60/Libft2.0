@@ -6,7 +6,7 @@
 #    By: agraton <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 12:16:20 by agraton           #+#    #+#              #
-#    Updated: 2021/03/06 18:14:36 by agraton          ###   ########.fr        #
+#    Updated: 2021/03/12 13:05:30 by agraton          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,4 +47,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus

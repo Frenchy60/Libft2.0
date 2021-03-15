@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:21:23 by agraton           #+#    #+#             */
-/*   Updated: 2020/11/23 12:53:18 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/11 10:41:29 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void		ft_putnbr_fd(int n, int fd)
 {
 	const long int	b = (n < 0) ? -(long int)n : n;
 
+	if (fd < 0 || fd > OPEN_MAX)
+		return ;
 	if (n < 0)
 		write(fd, "-", 1);
 	if (b >= 10)

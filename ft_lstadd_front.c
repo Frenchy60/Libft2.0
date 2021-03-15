@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:05:41 by agraton           #+#    #+#             */
-/*   Updated: 2021/03/06 18:27:36 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/15 11:11:31 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!new)
+	if (!lst || !new)
 		return ;
 	new->next = *lst;
 	*lst = new;

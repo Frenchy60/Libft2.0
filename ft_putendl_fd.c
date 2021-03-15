@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:21:11 by agraton           #+#    #+#             */
-/*   Updated: 2020/11/23 12:21:13 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/11 10:40:56 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void		ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
+	if (fd >= 0 && fd <= OPEN_MAX)
+	{
+		ft_putstr_fd(s, fd);
+		write(fd, "\n", 1);
+	}
 }
