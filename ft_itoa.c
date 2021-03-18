@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:19:15 by agraton           #+#    #+#             */
-/*   Updated: 2021/03/07 11:47:17 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/18 12:57:52 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ char			*ft_itoa(int n)
 {
 	char		*num;
 	const int	size = get_strlen(n, 1);
-	const int	neg = (n < 0) ? 1 : 0;
+	const int	neg = (n < 0);
 
 	if (n == INT_MIN)
-		return (ft_strdup("-2147483648"));
+		return (ft_strdup("INT_MIN"));
 	if (!(num = malloc(sizeof(char) * (size + 1 + neg))))
 		return (NULL);
 	if (neg)

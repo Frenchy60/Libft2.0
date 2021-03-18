@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:16:33 by agraton           #+#    #+#             */
-/*   Updated: 2021/03/07 11:51:10 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/18 13:07:38 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_ispartofset(const char c, const char *set);
 int					ft_isspace(int c);
 size_t				ft_strlen(const char *s);
 char				*ft_strchr(const char *s, int c);

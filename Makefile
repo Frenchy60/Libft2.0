@@ -6,11 +6,11 @@
 #    By: agraton <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 12:16:20 by agraton           #+#    #+#              #
-#    Updated: 2021/03/12 13:05:30 by agraton          ###   ########.fr        #
+#    Updated: 2021/03/18 13:07:05 by agraton          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = 	ft_isspace_bonus.c ft_ispartofset_bonus.c \
+SRC = 	ft_isspace_bonus.c \
 	ft_strlen.c ft_strchr.c ft_strncmp.c ft_strlcpy.c \
 	ft_strlcat.c ft_strdup.c ft_strjoin.c ft_strtrim.c \
 	ft_substr.c ft_calloc.c ft_strmapi.c \

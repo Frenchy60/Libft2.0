@@ -6,7 +6,7 @@
 /*   By: agraton <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 12:17:37 by agraton           #+#    #+#             */
-/*   Updated: 2021/03/05 09:46:04 by agraton          ###   ########.fr       */
+/*   Updated: 2021/03/18 12:54:25 by agraton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int		ft_isalnum(int c)
 {
-	return ((ft_isalpha(c) || ft_isdigit(c)) ? 1 : 0);
+	return ((ft_isalpha(c) || ft_isdigit(c)));
 }
